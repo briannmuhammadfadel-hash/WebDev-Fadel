@@ -1,0 +1,102 @@
+/* 1. Mengatur ulang margin bawaan browser dan memilih jenis huruf */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Gaya Latar Belakang Website (Tema Gelap) */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* 3. Gaya Header (Warna gradasi ungu-biru) */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200') no-repeat center center;
+    background-size: cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* 4. Mengatur tata letak kartu game dalam bentuk Grid (Kotak-kotak) */
+.katalog {
+    display: grid;
+    /* Ini membuat kartu otomatis menyesuaikan ukuran layar (responsif) */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 5. Desain per Kartu Game */
+.kartu-game {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden; /* Mencegah gambar keluar dari sudut melengkung */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek animasi yang mulus */
+    cursor: pointer;
+}
+
+/* Efek ketika kursor menyentuh kartu (kartu akan melayang sedikit) */
+.kartu-game:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(167, 119, 227, 0.4);
+}
+
+/* Mengatur ukuran gambar agar pas di dalam kartu */
+.kartu-game img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Area teks di dalam kartu */
+.info-game {
+    padding: 20px;
+}
+
+.info-game h3 {
+    font-size: 1.3rem;
+    color: #a777e3; /* Warna ungu untuk judul game */
+    margin-bottom: 5px;
+}
+
+.genre {
+    font-size: 0.9rem;
+    color: #aaaaaa; /* Warna abu-abu untuk genre */
+}
+
+/* 6. Desain Footer di bagian bawah */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #0a0a0a;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
+.rating {
+    font-size: 0.9rem;
+    color: #ffca28; /* Warna kuning emas untuk bintang */
+    margin-top: 5px;
+}
+.platform {
+    font-size: 0.8rem;
+    color: #6e8efb; /* Warna biru muda untuk platform */
+}
